@@ -57,7 +57,7 @@ def clean_data(df):
         print('Error:', ex)
 
 
-# method to load data to snowflake using spark
+# method to load data to snowflake using spark (incomplete, ignore this method for now, will push commits later)
 def spark_load():
     spark = SparkSession.builder.appName('Snowflake_load').getOrCreate()
 
@@ -104,6 +104,7 @@ if __name__ == '__main__':
         user = input('Snowflake User:')
         password = input('Snowflake Password:')
 
+        # make sure to update all these parameters with your snowflake account details
         sf_options = {
             'url': 'https://tmhwyab-ok70439.snowflakecomputing.com',
             'account': 'tmhwyab-OK70439',
